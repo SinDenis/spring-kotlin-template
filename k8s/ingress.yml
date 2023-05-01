@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: sprint-kotlin-template-ingress
+  name: spring-kotlin-template-ingress
   annotations:
     kubernetes.io/tls-acme: "false"
 spec:
   rules:
-    - host: java-app-sindenis.cloud.okteto.net
+    - host: spring-kotlin-template-sindenis.cloud.okteto.net
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: sprint-kotlin-template-service
+                name: spring-kotlin-template-service
                 port:
                   number: 8080

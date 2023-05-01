@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sprint-kotlin-template-deployment
+  name: spring-kotlin-template-deployment
   labels:
-    service: sprint-kotlin-template
+    service: spring-kotlin-template
 spec:
   replicas: 1
   selector:
     matchLabels:
-      service: sprint-kotlin-template
+      service: spring-kotlin-template
   template:
     metadata:
       labels:
-        service: sprint-kotlin-template
+        service: spring-kotlin-template
     spec:
       containers:
-        - name: sprint-kotlin-template
-          image: csindenis/sprint-kotlin-template:latest
+        - name: spring-kotlin-template
+          image: csindenis/spring-kotlin-template:latest
           ports:
             - containerPort: 8080
           resources:
